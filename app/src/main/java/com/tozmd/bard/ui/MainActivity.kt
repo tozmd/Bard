@@ -1,4 +1,4 @@
-package com.tozmd.bard.ui.compose
+package com.tozmd.bard.ui
 
 //Spotify Dependencies
 
@@ -14,6 +14,11 @@ import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.navigation.NavType
+import androidx.navigation.compose.NavHost
+import androidx.navigation.compose.composable
+import androidx.navigation.compose.rememberNavController
+import androidx.navigation.navArgument
 import com.spotify.android.appremote.api.ConnectionParams
 import com.spotify.android.appremote.api.Connector
 import com.spotify.android.appremote.api.SpotifyAppRemote
@@ -40,21 +45,39 @@ class MainActivity : ComponentActivity() {
 
         setContent {
             BardXTheme {
+                //Navigation controller to handle the composables
+                val navController = rememberNavController()
+                NavHost(
+                    navController = navController,
+                    startDestination = "recommendation_screen" //Will be changed
+                ) {
+                    composable("recommendation_screen",
+                        arguments = listOf(
+                            navArgument("") {
+
+                            }
+                        )) {
+                        //List all composables that will be on this screen
+                    }
+                }
                 // A surface container using the 'background' color from the theme
                 Surface(
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ) {
-                    Screen()
+                    //Screen()
                 }
             }
         }
     }
 }
 
+@Composable
+fun Screen(){
+}
 
 @Composable
-fun Screen() {
+fun RecommendationScreen() {
     val recommendationViewModel = remember {SongRecommendationViewModel()}
     val songRecommendationList = recommendationViewModel.status.collectAsState().value
     
