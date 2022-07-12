@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "992816580878",
+    "project_id": "bardx-691a5",
+    "storage_bucket": "bardx-691a5.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:992816580878:android:be4f958fa2a896f8c6af5f",
+        "android_client_info": {
+          "package_name": "com.tozmd.bardx"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "992816580878-tqefcffefg2vjbg6pe40ghu2nid26bnf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAqZFaUOLPMZ9f_vj2ZOFs2CLJ4zsOKAEU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "992816580878-tqefcffefg2vjbg6pe40ghu2nid26bnf.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
