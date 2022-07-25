@@ -116,7 +116,7 @@ dependencies {
     //Google Accompanist Library
     implementation "com.google.accompanist:accompanist-systemuicontroller:0.17.0"
 
-
-
+    //Material Icons
+    implementation "androidx.compose.material:material-icons-extended:$compose_version"
 
 }

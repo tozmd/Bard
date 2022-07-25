@@ -24,7 +24,6 @@ private val TAG: String? = "ActionFocusTextField"
 @Composable
 fun AutoFocusTextField(
     labelText: String,
-    placeholderText: String,
     focusManager: FocusManager
 ) {
     //Save texts over recompositions
@@ -46,11 +45,6 @@ fun AutoFocusTextField(
         modifier = Modifier
             .fillMaxWidth(0.95f)
             .focusable(),
-        placeholder = {
-            Text(placeholderText,
-                style = MaterialTheme.typography.bodySmall
-            )
-        },
         singleLine = true,
         label = {
             Text(labelText,

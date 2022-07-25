@@ -2,6 +2,8 @@ package com.tozmd.bard.ui.util
 
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.imePadding
+import androidx.compose.foundation.layout.navigationBarsPadding
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.MaterialTheme
@@ -18,8 +20,7 @@ fun LabeledButton(label: String, width: Float, height: Int) {
         onClick = { /*TODO*/ },
         modifier = Modifier
             .fillMaxWidth(width)
-            .height(height.dp)
-        ,
+            .height(height.dp),
         colors = ButtonDefaults.buttonColors(
             containerColor = MaterialTheme.colorScheme.primary
         ),

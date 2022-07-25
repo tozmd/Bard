@@ -14,6 +14,7 @@ import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.core.view.WindowCompat
 import androidx.navigation.NavType
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
@@ -43,6 +44,7 @@ class MainActivity : ComponentActivity() {
             .build()
 
         SpotifyAppRemote.connect(this, connectionParams,Connector.ConnectionListener)*/
+        WindowCompat.setDecorFitsSystemWindows(window, false)
 
         setContent {
             BardXTheme {
@@ -53,6 +55,7 @@ class MainActivity : ComponentActivity() {
                 ) {
                     //Navigation controller to handle the composables
                     val navController = rememberNavController()
+
                     NavHost(
                         navController = navController,
                         startDestination = "login_screen" //Will be changed

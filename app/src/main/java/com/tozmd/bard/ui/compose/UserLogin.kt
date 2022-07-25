@@ -12,6 +12,7 @@ import androidx.compose.ui.platform.LocalFocusManager
 import androidx.compose.ui.unit.dp
 import com.tozmd.bard.ui.util.AutoFocusTextField
 import com.tozmd.bard.ui.util.LabeledButton
+import com.tozmd.bard.ui.util.PasswordTextField
 
 //User login screen
 @OptIn(ExperimentalMaterial3Api::class)
@@ -58,10 +59,9 @@ fun LoginScreen() {
             modifier = Modifier.fillMaxWidth(),
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
-            AutoFocusTextField("Email", "", focusManager)
+            AutoFocusTextField("Email", focusManager)
             Spacer(modifier = Modifier.height(25.dp))
-            AutoFocusTextField( "Password", "", focusManager)
-            Spacer(modifier = Modifier.height(15.dp))
+            PasswordTextField(focusManager)
         }
         TextButton(
             onClick = { /*TODO*/ },
@@ -73,11 +73,12 @@ fun LoginScreen() {
                 color = MaterialTheme.colorScheme.onSecondary
             )
         }
-        Spacer(modifier = Modifier.height(15.dp))
         Column(modifier = Modifier
+            .imePadding()
             .fillMaxWidth(),
-            horizontalAlignment = Alignment.CenterHorizontally
+            horizontalAlignment = Alignment.CenterHorizontally,
         ) {
+            Spacer(modifier = Modifier.height(15.dp))
             LabeledButton("Continue", 0.95f, 50)
         }
     }
