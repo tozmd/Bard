@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Gradle: C">
+    <CLASSES>
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/8d0fb09023cf1abcb20f73cda6e6c194/transformed/spotify-app-remote-release-0.7.2/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/df6c0284367a3178664a63aa6c8bbc72/transformed/spotify-app-remote-release-0.7.2/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/28f48f2ec8d61d1db7039a0d505135aa/transformed/spotify-app-remote-release-0.7.2/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/28f48f2ec8d61d1db7039a0d505135aa/transformed/spotify-app-remote-release-0.7.2/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/28f48f2ec8d61d1db7039a0d505135aa/transformed/spotify-app-remote-release-0.7.2/AndroidManifest.xml" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

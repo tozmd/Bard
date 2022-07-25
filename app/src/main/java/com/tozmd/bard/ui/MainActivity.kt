@@ -22,6 +22,7 @@ import androidx.navigation.navArgument
 import com.spotify.android.appremote.api.ConnectionParams
 import com.spotify.android.appremote.api.Connector
 import com.spotify.android.appremote.api.SpotifyAppRemote
+import com.tozmd.bard.ui.compose.LoginScreen
 import com.tozmd.bard.ui.theme.BardXTheme
 import com.tozmd.bard.viewmodels.SongRecommendationViewModel
 
@@ -45,35 +46,26 @@ class MainActivity : ComponentActivity() {
 
         setContent {
             BardXTheme {
-                //Navigation controller to handle the composables
-                val navController = rememberNavController()
-                NavHost(
-                    navController = navController,
-                    startDestination = "recommendation_screen" //Will be changed
-                ) {
-                    composable("recommendation_screen",
-                        arguments = listOf(
-                            navArgument("") {
-
-                            }
-                        )) {
-                        //List all composables that will be on this screen
-                    }
-                }
                 // A surface container using the 'background' color from the theme
                 Surface(
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ) {
-                    //Screen()
+                    //Navigation controller to handle the composables
+                    val navController = rememberNavController()
+                    NavHost(
+                        navController = navController,
+                        startDestination = "login_screen" //Will be changed
+                    ) {
+                        composable("login_screen") {
+                            //List all composable that will be on this screen
+                            LoginScreen()
+                        }
+                    }
                 }
             }
         }
     }
-}
-
-@Composable
-fun Screen(){
 }
 
 @Composable

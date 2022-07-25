@@ -8,6 +8,7 @@ import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch
 
+//Handles the song recommendation data from Spotify API
 class SongRecommendationViewModel(): ViewModel() {
 
     // The internal MutableLiveData that stores the status of the most recent request
