@@ -1,37 +1,35 @@
-package com.tozmd.bard.ui.util
+package com.tozmd.bardx.ui.compose
 
 import androidx.compose.foundation.focusable
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.text.KeyboardActions
 import androidx.compose.foundation.text.KeyboardOptions
-import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.Text
-import androidx.compose.material3.TextField
-import androidx.compose.material3.TextFieldDefaults
+import androidx.compose.material3.*
 import androidx.compose.runtime.*
-import androidx.compose.ui.ExperimentalComposeUiApi
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.focus.FocusDirection
 import androidx.compose.ui.focus.FocusManager
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.input.ImeAction
 
-private val TAG: String? = "ActionFocusTextField"
+//private val TAG: String? = "ActionFocusTextField"
 
 //A text field composable that will focus when tapped
 //and 'unfocus' when keyboard is down or when tapped outside the text field
-@OptIn(ExperimentalComposeUiApi::class)
+@OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun AutoFocusTextField(
-    labelText: String,
+    email: String,
+    onNewValue: (String) -> Unit,
     focusManager: FocusManager
 ) {
     //Save texts over recompositions
-    var text by remember { mutableStateOf("") }
-
+//    var email by remember { mutableStateOf("") }
+    // To be used as a string resource
+    // val placeHolder = stringResource(R.string.email_placeholder)
     TextField(
-        value = text,
-        onValueChange = { text = it },
+        value = email,
+        onValueChange = { onNewValue(it) },
         colors = TextFieldDefaults.textFieldColors(
             textColor = Color.White,
             cursorColor = Color.White,
@@ -47,7 +45,8 @@ fun AutoFocusTextField(
             .focusable(),
         singleLine = true,
         label = {
-            Text(labelText,
+            Text(
+                text = "Email",
                 style = MaterialTheme.typography.bodySmall
             )
         },

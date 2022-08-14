@@ -1,10 +1,8 @@
-package com.tozmd.bard.viewmodels
+package com.tozmd.bardx.screens.recommendation
 
-import android.app.Application
 import androidx.lifecycle.*
-import com.tozmd.bard.network.SpotifyApi
+import com.tozmd.bardx.services.SpotifyApi
 import kotlinx.coroutines.flow.MutableStateFlow
-import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch
 

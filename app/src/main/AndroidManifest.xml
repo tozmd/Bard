@@ -14,10 +14,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.BardX"
-        >
-
+        android:name=".BardHiltApp">
         <activity
-            android:name="com.tozmd.bard.ui.MainActivity"
+            android:name=".BardActivity"
             android:windowSoftInputMode="adjustResize"
             android:exported="true"
             android:theme="@style/Theme.BardX">

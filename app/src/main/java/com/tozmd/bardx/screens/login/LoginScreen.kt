@@ -1,4 +1,4 @@
-package com.tozmd.bard.ui.compose
+package com.tozmd.bardx.screens.login
 
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.interaction.MutableInteractionSource
@@ -10,14 +10,20 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalFocusManager
 import androidx.compose.ui.unit.dp
-import com.tozmd.bard.ui.util.AutoFocusTextField
-import com.tozmd.bard.ui.util.LabeledButton
-import com.tozmd.bard.ui.util.PasswordTextField
+import com.tozmd.bardx.ui.compose.AutoFocusTextField
+import com.tozmd.bardx.ui.compose.LabeledButton
+import com.tozmd.bardx.ui.compose.PasswordTextField
+import androidx.hilt.navigation.compose.hiltViewModel
+
 
 //User login screen
-@OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun LoginScreen() {
+fun LoginScreen(
+    popUpScreen: () -> Unit,
+    viewModel: LoginViewModel = hiltViewModel()
+) {
+    //To observe changes in login viewModel
+    val uiState by viewModel.uiState
 
     val margin = 25.dp
 
@@ -59,9 +65,10 @@ fun LoginScreen() {
             modifier = Modifier.fillMaxWidth(),
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
-            AutoFocusTextField("Email", focusManager)
+            //Runs function when value changed
+            AutoFocusTextField(uiState.email, viewModel::onEmailChange, focusManager)
             Spacer(modifier = Modifier.height(25.dp))
-            PasswordTextField(focusManager)
+            PasswordTextField(uiState.password, uiState.passwordVisible, viewModel::onPasswordChange, focusManager)
         }
         TextButton(
             onClick = { /*TODO*/ },
@@ -83,3 +90,4 @@ fun LoginScreen() {
         }
     }
 }
+

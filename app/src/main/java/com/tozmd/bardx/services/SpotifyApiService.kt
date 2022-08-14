@@ -1,13 +1,10 @@
-package com.tozmd.bard.network
+package com.tozmd.bardx.services
 
-import com.tozmd.bard.data.api.ApiConstants.BASE_URL
-import com.tozmd.bard.data.api.ApiConstants.END_POINT
-import okhttp3.OkHttpClient
+import com.tozmd.bardx.data.api.ApiConstants.BASE_URL
+import com.tozmd.bardx.data.api.ApiConstants.END_POINT
 import retrofit2.Retrofit
 import retrofit2.converter.scalars.ScalarsConverterFactory
-import retrofit2.create
 import retrofit2.http.GET
-import java.util.concurrent.TimeUnit
 
 //Retrofit object w/ Spotify API base URL and converter factory
 private val retrofit = Retrofit.Builder()

@@ -1,4 +1,4 @@
-package com.tozmd.bard.ui.theme
+package com.tozmd.bardx.ui.theme
 
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.darkColorScheme

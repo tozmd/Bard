@@ -1,4 +1,4 @@
-package com.tozmd.bard
+package com.tozmd.bardx
 
 import org.junit.Test
 

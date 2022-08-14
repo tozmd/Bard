@@ -1,4 +1,4 @@
-package com.tozmd.bard.data.api
+package com.tozmd.bardx.data.api
 
 object ApiConstants {
     const val BASE_URL = "https://developer.spotify.com/"
